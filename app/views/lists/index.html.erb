@@ -1,13 +1,13 @@
-<div class="cover mb-4 d-flex align-items-center justify-content-center" style="height: 50vh; background: linear-gradient(to right, #000, #444);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path("list_background.jpg") %>);">
   <div class="main-page text-center text-white">
-    <h1 class="display-4">Save Any Kind of Movies</h1>
+    <h1 class="display-4 banner-title">Save and list you're favorite movies 🍿</h1>
     <h3 class="typed-js mt-3" data-controller="typed-js"></h3>
   </div>
 </div>
 
 <div class="container py-5">
   <div class="d-flex align-items-center justify-content-between mb-4">
-    <h3 class="mb-0">My Lists</h3>
+    <h3 class=" text-color mb-0">My Lists</h3>
     <%= link_to "Create a Movie List", new_list_path, class: "btn btn-primary" %>
   </div>
 
@@ -17,7 +17,7 @@
         <%= link_to list_path(list), class: "text-decoration-none" do %>
           <div class="card h-100 shadow-sm">
             <div
-              class="card-category card-img-top"
+              class=" display-lists card-category card-img-top"
               data-aos="zoom-in"
               style="background-image: url('<%= url_for(list.photo) if list.photo.attached? %>'); background-size: cover; height: 200px;"
             ></div>

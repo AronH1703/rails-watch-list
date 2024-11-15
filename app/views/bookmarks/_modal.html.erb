@@ -7,6 +7,9 @@
         </button>
       </div>
 
+
+    <%# Form fyrir lista kvikmynda sem hægt er að ná í 👇🏻 %>
+
       <%= simple_form_for [list, bookmark] do |f| %>
         <div class="modal-body">
           <%= f.association :movie, collection: Movie.all.order(:title), prompt: "Select a movie", input_html: { data: { controller: "tom-select" } } %>
