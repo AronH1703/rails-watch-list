@@ -1,13 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Geist+Mono:wght@100..900&family=Space+Grotesk:wght@300..700&family=Tiny5&display=swap');
+
 .banner {
   background-size: cover;
   background-position: center;
   padding: 150px 0;
+  text-align: center;
+
+  h1 {
+    margin: 0 auto;
+    color: #ffffff; // Final text color
+    font-family: "Geist Mono", monospace;
+    font-weight: bold;
+    font-size: 42px;
+    text-shadow: 6px 6px 0px rgba(255, 236, 159, 0.2);
+    opacity: 0; // Start invisible
+    animation: fadeIn 3s ease-in-out forwards; // Fade-in animation
+  }
 }
 
-.banner h1 {
-  margin: 0;
-  color: rgb(180, 180, 180);
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
-  font-weight: bold;
+// Define the fade-in animation
+@keyframes fadeIn {
+  0% {
+    opacity: 0; // Fully transparent
+    transform: translateY(20px); // Slight downward offset
+  }
+  50% {
+    opacity: 0.5; // Partially visible
+    transform: translateY(10px); // Move closer to the final position
+  }
+  100% {
+    opacity: 1; // Fully visible
+    transform: translateY(0); // Return to original position
+  }
 }
